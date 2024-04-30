@@ -20,4 +20,3 @@ Route::middleware('api')->post('/transacao',[TransactionController::class, 'stor
 Route::post('/conta', 'App\Http\Controllers\AccountController@register');
 Route::get('/conta', 'App\Http\Controllers\AccountController@getByAccountId');
 Route::post('/login', 'App\Http\Controllers\AccountController@login');
-Route::delete('/users/{id}', 'App\Http\Controllers\AccountController@destroy');

@@ -65,18 +65,6 @@ class AccountController extends Controller
         // Save the updated user
         $user->save();
     }
-    public function destroy($id)
-    {
-        $user = User::find($id);
-
-        if (!$user) {
-            return response()->json(['error' => 'User not found'], 404);
-        }
-
-        $user->delete();
-
-        return response()->json(['message' => 'User deleted successfully'], 200);
-    }
     public function login(Request $request)
     {
         $credentials = $request->only('conta_id', 'password');
